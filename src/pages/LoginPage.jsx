@@ -7,7 +7,7 @@ export default function LoginPage() {
   const [ loading, setLoading ] = useState(false);
   const [ msg, setMsg ] = useState("");
 
-  const handleLogin = async () => {
+  const handleLogin = async () => { //이벤트 핸들러 함수이므로 camelCase
     try{
       const response = await fetch("/api/login", {
         method: "POST",
