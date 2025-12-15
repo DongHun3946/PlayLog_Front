@@ -1,0 +1,47 @@
+<svg
+  width="32"
+  height="32"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+  </defs>
+
+  <!-- Controller outline -->
+  <path
+    d="
+      M96 192
+      C64 192 48 224 48 256
+      C48 320 80 368 144 368
+      L192 368
+      C208 368 224 352 224 336
+      L224 320
+      L288 320
+      L288 336
+      C288 352 304 368 320 368
+      L368 368
+      C432 368 464 320 464 256
+      C464 224 448 192 416 192
+      Z
+    "
+    fill="none"
+    stroke="url(#grad)"
+    stroke-width="24"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- D-pad -->
+  <rect x="128" y="248" width="64" height="16" rx="8" fill="url(#grad)" />
+  <rect x="152" y="224" width="16" height="64" rx="8" fill="url(#grad)" />
+
+  <!-- Buttons -->
+  <circle cx="344" cy="232" r="10" fill="url(#grad)" />
+  <circle cx="368" cy="256" r="10" fill="url(#grad)" />
+  <circle cx="320" cy="256" r="10" fill="url(#grad)" />
+  <circle cx="344" cy="280" r="10" fill="url(#grad)" />
+</svg>
