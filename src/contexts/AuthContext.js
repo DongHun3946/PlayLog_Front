@@ -22,3 +22,9 @@ export const AuthProvider = ({children}) => {
     </AuthContext.Provider>
   );
 };
+
+/**
+ * 하위 컴포넌트에서 사용하는 예시 
+ * import { AuthContext } from './contexts/AuthContext.js'
+ * const { user } = useContext(AuthContext);
+ */
