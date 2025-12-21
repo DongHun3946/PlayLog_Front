@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import { memo } from 'react';
-import '../styles/Header.css';
-import PlayLogLogo from '../assets/playlog.svg';
+import { useModal } from 'contexts/ModalContext';
+import 'styles/Header.css';
+import PlayLogLogo from 'assets/playlog.svg';
 
 const Header = () => {
+  const { openModal } = useModal();
   return (
     <header className="header">
       <div className="wrapper">
@@ -20,7 +21,8 @@ const Header = () => {
         <nav className="nav">
           <Link to="/games/new" className="link">신작 게임</Link>
           <Link to="/games/popular" className="link">인기 게임</Link>
-          <Link to="/login" className="link">로그인</Link>
+          <button onClick={() => openModal('Login')} className="link">로그인</button>
+          
         </nav>
 
         <div className="setting">
@@ -31,4 +33,4 @@ const Header = () => {
   );
 };
 
-export default memo(Header);
+export default Header;
