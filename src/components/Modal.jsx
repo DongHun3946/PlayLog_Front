@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import 'styles/Modal.css';
-import XIcon from 'assets/x.svg';
-import BackIcon from 'assets/back.svg';
+import { ReactComponent as XIcon } from 'assets/x.svg';
+import { ReactComponent as BackIcon } from 'assets/back.svg';
 
-const Modal = ({children, isModalOpen, closeModal, prevStep, showBack}) => {
+const Modal = ({children, isModalOpen, closeModal, prevStep, showBack, theme = 'black'}) => {
 
   useEffect(() => {
     if(isModalOpen) {
@@ -24,16 +24,16 @@ const Modal = ({children, isModalOpen, closeModal, prevStep, showBack}) => {
 
   return (
     <div className="modal-overlay">
-      <div className="modal-box">
+      <div className="modal-box" data-theme={theme}>
           <div className="modal-header">
           <div className="modal-header-start">
-            <img src={BackIcon} alt="back btn" onClick={handleBackClick}/>
+            <BackIcon className="modal-icon" onClick={handleBackClick}/>
           </div>
           <div className="modal-header-center">
 
           </div>
           <div className="modal-header-end">
-            <img src={XIcon} alt="X btn" onClick={handleCloseClick}/>
+            <XIcon className="modal-icon" onClick={handleCloseClick}/>
           </div>
         </div>
         <div className="modal-step">
