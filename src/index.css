@@ -1,3 +1,7 @@
+*, **::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;  /* 이렇게 변경 */

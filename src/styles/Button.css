@@ -6,7 +6,6 @@
 
 /*----모달창에 사용하는 버튼----*/
 .btn-modal {
-    box-sizing: border-box;
     width: 100%;
     height: 100%;
     padding: 10px;
