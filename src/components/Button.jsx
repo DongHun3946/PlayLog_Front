@@ -1,15 +1,17 @@
-const Button = ({children, text, color, padding = "5px"}) => {
+import 'styles/Button.css';
+
+const Button = ({children, type, handleClick}) => {
   return (
-    <button 
-      onClick={handleClick}
-      style={{
-        backgroundColor: color, 
-        padding: padding
-      }}>
-      {text}
-      {children}
-    </button>
-  )
-}
+    <>
+      <button 
+        onClick={handleClick}
+        type={type}
+        className={`btn btn-${type}`}
+      >
+        {children}
+      </button>
+    </>
+  );
+};
 
 export default Button;

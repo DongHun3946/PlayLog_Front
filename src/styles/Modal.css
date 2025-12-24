@@ -13,11 +13,12 @@
 }
 
 .modal-box {
+  box-sizing: border-box;
   width: 520px;
   height: 580px;
   padding: 10px;
   border-radius: 16px;
-  background-color: rgba(0, 0, 0);
+  background-color: rgb(80, 80, 80);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +35,7 @@
 
 .modal-header-start {
   flex: 1;
-  background-color: aqua;
+  /* background-color: aqua; */
   
   display: flex;
   justify-content: center;
@@ -43,21 +44,28 @@
 
 .modal-header-center {
   flex: 8;
-  background-color: rgb(68, 182, 34);
+  /* background-color: rgb(68, 182, 34); */
 }
 
 .modal-header-end {
   flex: 1;
-  background-color: rgb(170, 89, 65);
+  /* background-color: rgb(170, 89, 65); */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .modal-icon {
-  width: 24;
-  height: 24;
+  
   cursor: pointer;
+}
+
+[data-theme="black"] .modal-icon {
+  color: white;
+}
+
+[data-theme="white"] .modal-icon {
+  color: black;
 }
 
 .modal-step {
@@ -68,9 +76,10 @@
 }
 
 .modal-content {
-  flex: 6;
+  flex: 8;
 }
 
 .modal-footer {
-  flex: 2;
+  flex: 1;
+  width: 100%;
 }

@@ -1,7 +1,9 @@
+import 'styles/Header.css';
+
 import { Link } from 'react-router-dom';
 import { useModal } from 'contexts/ModalContext';
-import 'styles/Header.css';
 import PlayLogLogo from 'assets/playlog.svg';
+import Button from 'components/Button';
 
 const Header = () => {
   const { openModal } = useModal();
@@ -21,8 +23,7 @@ const Header = () => {
         <nav className="nav">
           <Link to="/games/new" className="link">신작 게임</Link>
           <Link to="/games/popular" className="link">인기 게임</Link>
-          <button onClick={() => openModal('Login')} className="link">로그인</button>
-          
+          <Button type="header" handleClick={()=>{openModal('Login');}}>로그인</Button>
         </nav>
 
         <div className="setting">

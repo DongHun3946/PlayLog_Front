@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import 'styles/Modal.css';
 import { ReactComponent as XIcon } from 'assets/x.svg';
 import { ReactComponent as BackIcon } from 'assets/back.svg';
+import Button from 'components/Button';
 
 const Modal = ({children, isModalOpen, closeModal, prevStep, showBack, theme = 'black'}) => {
 
@@ -45,7 +46,9 @@ const Modal = ({children, isModalOpen, closeModal, prevStep, showBack, theme = '
           {children}
         </div>
         <div className="modal-footer">
-          
+          <Button type="modal" handleClick={prevStep} >
+            다음
+          </Button>
         </div>
       </div>
     </div>
