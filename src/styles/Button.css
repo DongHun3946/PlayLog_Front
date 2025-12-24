@@ -4,6 +4,7 @@
     cursor: pointer;
 }
 
+/*----모달창에 사용하는 버튼----*/
 .btn-modal {
     box-sizing: border-box;
     width: 100%;
@@ -23,9 +24,21 @@
     background-color: #6ED1C0;
     color: white;
 }
+/*---------------------------*/
 
+/*-----헤더에 사용하는 버튼-----*/
 .btn-header {
     background-color: transparent;
     border: none;
-    color: white
+    color: white;
+    
 }
+
+[data-theme="black"] .btn-header {
+    color: white;
+}
+
+[data-theme="white"] .btn-header {
+    color: black;
+}
+/*----------------------------*/

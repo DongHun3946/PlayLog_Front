@@ -5,11 +5,11 @@ import { useModal } from 'contexts/ModalContext';
 import PlayLogLogo from 'assets/playlog.svg';
 import Button from 'components/Button';
 
-const Header = () => {
+const Header = (theme) => {
   const { openModal } = useModal();
   return (
     <header className="header">
-      <div className="wrapper">
+      <div className="wrapper" data-theme={theme="black"}>
         
         <Link to="/" className="link">
           <img src={PlayLogLogo} alt="playlog-icon" />
@@ -23,7 +23,7 @@ const Header = () => {
         <nav className="nav">
           <Link to="/games/new" className="link">신작 게임</Link>
           <Link to="/games/popular" className="link">인기 게임</Link>
-          <Button type="header" handleClick={()=>{openModal('Login');}}>로그인</Button>
+          <Button className="link" type="header" handleClick={()=>{openModal('Login');}}>로그인</Button>
         </nav>
 
         <div className="setting">
