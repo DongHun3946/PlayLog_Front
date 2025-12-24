@@ -39,7 +39,7 @@ export const ModalProvider = ({children}) => {
         closeModal={closeModal}
         prevStep={prevStep}
         nextStep={nextStep}
-        showBack={step > 0}
+        showBack={step > 1}
       >
         <ModalContent/>
       </Modal>

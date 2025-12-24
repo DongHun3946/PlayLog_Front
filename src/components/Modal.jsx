@@ -19,15 +19,17 @@ const Modal = ({children, isModalOpen, closeModal, prevStep, showBack, theme = '
   }
 
   const handleCloseClick = () => {
-    
+    closeModal();
   }
+
+  if (!isModalOpen) return null;
 
   return (
     <div className="modal-overlay">
       <div className="modal-box" data-theme={theme}>
           <div className="modal-header">
           <div className="modal-header-start">
-            <BackIcon className="modal-icon" onClick={handleBackClick}/>
+            {showBack && <BackIcon className="modal-icon" onClick={handleBackClick}/>}
           </div>
           <div className="modal-header-center">
 
@@ -43,7 +45,7 @@ const Modal = ({children, isModalOpen, closeModal, prevStep, showBack, theme = '
           {children}
         </div>
         <div className="modal-footer">
-
+          
         </div>
       </div>
     </div>
