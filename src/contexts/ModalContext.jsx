@@ -23,7 +23,6 @@ export const ModalProvider = ({children}) => {
 
   const prevStep = () => {
     setStep(prev => Math.max(prev- 1, 1));
-    console.log("다음 단계");
   }
 
   const nextStep = (data = {}) => {

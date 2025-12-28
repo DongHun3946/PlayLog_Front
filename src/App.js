@@ -4,29 +4,31 @@ import Header from 'layouts/Header';
 import SignupPage from 'pages/SignupPage';
 import MainPage from 'pages/MainPage';
 import { ModalProvider } from 'contexts/ModalContext';
+import { ThemeProvider } from 'contexts/ThemeContext';
 
 function App() {
   return (
-    <ModalProvider>
-      <BrowserRouter>
-        <Header/>
-        <Routes>
-          {/* 메인 페이지 */}
-          <Route path="/" element={<MainPage/>}/>
+    <ThemeProvider>
+      <ModalProvider>
+        <BrowserRouter>
+          <Header/>
+          <Routes>
+            {/* 메인 페이지 */}
+            <Route path="/" element={<MainPage/>}/>
 
-          {/* 인증 페이지 */}
-          {/* <Route path="/login" element={<LoginPage/>}/> */}
-          <Route path="/signup" element={<SignupPage/>}/>
+            {/* 인증 페이지 */}
+            {/* <Route path="/login" element={<LoginPage/>}/> */}
+            <Route path="/signup" element={<SignupPage/>}/>
 
-          {/* 게임 페이지 */}
-          <Route path="/games"/>
+            {/* 게임 페이지 */}
+            <Route path="/games"/>
 
-          {/* 리뷰 페이지 */}
-          <Route path="/reviews"/>
-        </Routes>
-      </BrowserRouter>
-    </ModalProvider>
-      
+            {/* 리뷰 페이지 */}
+            <Route path="/reviews"/>
+          </Routes>
+        </BrowserRouter>
+      </ModalProvider>
+    </ThemeProvider>
   );
 }
 

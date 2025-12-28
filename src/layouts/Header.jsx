@@ -1,14 +1,23 @@
 import 'styles/Header.css';
 
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useModal } from 'contexts/ModalContext';
+import { useTheme } from 'contexts/ThemeContext';
+import { ReactComponent as SearchIcon } from 'assets/search.svg';
+import { ReactComponent as MenuIcon } from 'assets/hambuger.svg';
 import PlayLogLogo from 'assets/playlog.svg';
+
 import Button from 'components/Button';
 
-const Header = (theme) => {
+const Header = () => {
   const { openModal } = useModal();
+  const { theme, toggleTheme } = useTheme();
+  const [ isSearchOpen, setIsSearchOpen ] = useState(false);
+  const [ isMenuOpen, setIsMenuOpen ] = useState(false);
+
   return (
-    <header className="PL-Nav" data-theme={theme="black"}>
+    <header className="PL-Nav">
       <div className="wrapper">
         <div className="title">
           <Link to="/" className="link">
@@ -35,12 +44,20 @@ const Header = (theme) => {
           </div>
 
           <div className="setting">
+            <button className="theme-toggle-btn" onClick={toggleTheme}>
+              {theme === 'dark' ? '🌙' : '☀️'}
+            </button>
+            <div className="mobile">
+              <SearchIcon className="search-icon-btn" onClick={()=>{
+                setIsSearchOpen(!isSearchOpen)
+              }}/>
+              <MenuIcon className="menu-icon-btn" onClick={()=>{
 
+              }}/>
+            </div>
           </div>
+          
         </div>
-       
-        
-        
       </div>
     </header>
   );

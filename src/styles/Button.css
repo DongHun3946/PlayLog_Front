@@ -12,16 +12,8 @@
     border-radius: 50px;
     font-size: 18px;
     font-weight: 700;
-}
-
-[data-theme="black"] .btn-modal {
-    background-color: #D4A854;
-    color: white;
-}
-
-[data-theme="white"] .btn-modal {
-    background-color: #6ED1C0;
-    color: white;
+    background-color: var(--btn-primary);
+    color: var(--text-secondary);
 }
 /*---------------------------*/
 
@@ -29,15 +21,6 @@
 .btn-header {
     background-color: transparent;
     border: none;
-    color: white;
-    
-}
-
-[data-theme="black"] .btn-header {
-    color: white;
-}
-
-[data-theme="white"] .btn-header {
-    color: black;
+    color: var(--text-primary);
 }
 /*----------------------------*/
