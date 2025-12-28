@@ -43,7 +43,7 @@
 
 body {
   margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Pretendard', ui-sans-serif, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-secondary);
