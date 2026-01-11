@@ -41,9 +41,9 @@ const Header = () => {
           </div>
 
           <div className="nav">
-            <Link to="/games/new" className="link">신작 게임</Link>
-            <Link to="/games/popular" className="link">인기 게임</Link>
-            <Button className="link" type="header" handleClick={()=>    {openModal('Login');}}>로그인
+            <Link to="/games/new" className="link link-btn">신작 게임</Link>
+            <Link to="/games/popular" className="link link-btn">인기 게임</Link>
+            <Button className="link link-btn" type="header" handleClick={()=>    {openModal('Login');}}>로그인
             </Button>
             <div className="mobile">
               <SearchIcon className="search-icon-btn" onClick={()=>{
@@ -53,7 +53,7 @@ const Header = () => {
                 setIsMenuOpen(!isMenuOpen);
               }}/>
             </div>
-            <div className="settingWrap">
+            <div className="link link-btn settingWrap">
               <SettingsIcon className="setting-icon-btn" onClick={()=>{
                 setIsSettingOpen(!isSettingOpen);
               }}/>
